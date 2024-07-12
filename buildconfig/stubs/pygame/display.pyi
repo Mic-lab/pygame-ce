@@ -1,4 +1,4 @@
-from typing import Dict, List, Optional, Tuple, Union, overload, Literal
+from typing import Dict, List, Optional, Tuple, Union, overload, Literal, Iterable
 
 from pygame.constants import FULLSCREEN
 from pygame.surface import Surface
@@ -47,7 +47,7 @@ def get_surface() -> Surface: ...
 def flip() -> None: ...
 @overload
 def update(
-    rectangle: Optional[Union[RectValue, Sequence[Optional[RectValue]]]] = None, /
+    rectangle: Optional[Union[RectValue, Iterable[Optional[RectValue]]]] = None, /
 ) -> None: ...
 @overload
 def update(x: int, y: int, w: int, h: int, /) -> None: ...
